@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>Besnik</p>
+        </div>
+        <div class="options">
+            <p>Home</p>
+            <p>PRODUCTS</p>
+            <p>LOCATION</p>
+            <P>SHOP</P>
+
+        </div>
+        <div class="usericons">
+            <div class="roundedge ">
+                <img src="./search.png" alt="">
+            </div>
+            <div class="roundedge whitebg noedge">
+                <img src="./bag.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="herosection">
+        <div class="heroleft">
+            <div class="herotitles">
+                <p>ALL NATURAL</p>
+                <h1>PEANUT <br> BUTTER</h1>
+                <p>Peanuts are roasted in oil and sprinkled
+                    with just right amount of salt then ground
+                    to a smooth</p>
+                <p> <b>$9.95</b> Regular Price </p>
+
+            </div>
+            <div class="pricecalc">
+                <button class="operator" id="sub">-</button>
+                <p> <b><span id="count"></span> </b> </p>
+                <button class="operator" id="add">+</button>
+
+                <div class="total">
+                    <p>BUY <b>$ <span id="sum"></span></b></p>
+                </div>
+            </div>
+        </div>
+        <div class="heroright">
+            <img src="./peanutmain.png" alt="">
+        </div>
+    </div>
+
+    <div class="newproducts">
+        <div class="newtitles">
+            <p>OTHER PRODUCTS</p>
+            <P>IN NEW MERCHENDAISE <br> IS 
+            READY FOR ORDER</P>
+        </div>
+        <img src="./otherpeanuts.png" alt="">
+    </div>
+
+    <div class="besnik">
+        <p> <b>Besnik</b></p>
+        <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Porro harum adipisci 
+            provident enim similique maxime obcaecati
+             dolorem odit, dolore sit!</p>
+    </div>
+
+    <div class="craftbeer">
+        <img src="./cofeee.png" alt="" class="cofee">
+        <img src="./craftbeer-removebg-preview.png" alt="">
+        
+        <div class="crafttitle">
+            <p>CRAFT BEER MIX <br> 6 OZ.</p>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo quisquam quia quibusdam fuga voluptatum
+                 asperiores provident sit alias vitae?</P>
+                <p><b>Load More</b></p>
+        </div>
+    </div>
+
+    <div class="craftbeer">
+        <img src="./coca.png" alt="" class="cofee" style="left:0px;">
+       
+        <div class="crafttitle">
+            <p>MILK CHOCLATE  <br>RAISINS 10 OZ.</p>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo quisquam quia quibusdam fuga voluptatum
+                 asperiores provident sit alias vitae?</P>
+                <p><b>Load More</b></p>
+        </div>
+
+        <img src="./raisins-removebg-preview.png" alt="" class="special">
+        
+    </div>
+
+    <div class="newsletter">
+        <div class="newstitle">
+            <p>BESNIK</p>
+            <P>GET UPDATED NEWS</P>
+            <p>Be the first to know about sales, news, upcoming product releases,
+                events and much more.
+            </p>
+        </div>
+        <div class="inputbox">
+                <input type="text" placeholder="Enter your email address">
+                <button class="subscribe">
+                    <p>SUBCSRIBE</p>
+                </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="besnikfooter">Besnik</p>
+        <div class="contact">
+            <p>CONTACT US</p>
+            <p>(855) 811-0024</p>
+        </div>
+        <div class="footeroptions">
+            <p>Home</p>
+            <p>Products</p>
+            <p>Location</p>
+            <P>Shop</P>
+        </div>
+       
+    </div>
+</body>
+
+<script>
+    var sum = 9.95
+    var count = 1
+    const add = document.getElementById("add");
+    const sub = document.getElementById('sub')
+    add.addEventListener('click', incriment)
+    sub.addEventListener('click', decrement)
+    document.getElementById('sum').innerHTML = sum.toFixed(2)
+    document.getElementById('count').innerHTML = count
+
+    function incriment() {
+        count++
+        document.getElementById('count').innerHTML = count
+        sum += 9.95
+        document.getElementById('sum').innerHTML = sum.toFixed(2)
+
+    }
+
+    function decrement() {
+        if (count > 1) {
+            --count;
+            document.getElementById('count').innerHTML = count
+            sum -= 9.95
+            document.getElementById('sum').innerHTML = sum.toFixed(2)
+
+        } else {
+            return false;
+        }
+    }
+</script>
+
+</html>
