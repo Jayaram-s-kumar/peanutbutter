@@ -42,7 +42,7 @@
                 <p>Peanuts are roasted in oil and sprinkled
                     with just right amount of salt then ground
                     to a smooth</p>
-                <p> <b>$9.95</b> Regular Price </p>
+                <p> <b>₹ 150</b> Regular Price </p>
 
             </div>
             <div class="pricecalc">
@@ -51,7 +51,7 @@
                 <button class="operator" id="add">+</button>
 
                 <div class="total">
-                    <p>BUY <b>$ <span id="sum"></span></b></p>
+                    <p>BUY <b>₹ <span id="sum"></span></b></p>
                 </div>
             </div>
         </div>
@@ -129,7 +129,9 @@
         </div>
         <div class="contact">
             <p>CONTACT US</p>
-            <p>(855) 811-0024</p>
+            <p>Email: <a href="mailto:teamigoraza@gmail.com" style="color: #5b6361;">teamigoraza@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917736886026" style="color: #5b6361;">+917736886026</a></p>
+
         </div>
         <div class="footeroptions">
             <p>Home</p>
@@ -140,15 +142,24 @@
 
     </div>
 
-    <div class="footer cfooter" style="margin-top: 0px;text-align: center;padding-left: 0px;">
+   
+    <div class="love">
         <p>ⒸCopyright & All Rights Reserved 2023 <a href="https://www.igoraza.com/">@IGORAZA.</a> Designed By IGORAZA
         </p>
+        <div class="socialicons">
+            <img src="./fbdark.png" alt="" />
+            <img src="./twitterdark.png" alt="" />
+            <img src="./linkedindark.png" alt="" />
+            <a href="https://www.igoraza.com/">
+                <img src="./globedark.png" alt="" />
+            </a>
+        </div>
     </div>
     </noscript>
 </body>
 
 <script>
-    var sum = 9.95
+    var sum = 150
     var count = 1
     const add = document.getElementById("add");
     const sub = document.getElementById('sub')
@@ -160,7 +171,7 @@
     function incriment() {
         count++
         document.getElementById('count').innerHTML = count
-        sum += 9.95
+        sum += 150
         document.getElementById('sum').innerHTML = sum.toFixed(2)
 
     }
@@ -169,7 +180,7 @@
         if (count > 1) {
             --count;
             document.getElementById('count').innerHTML = count
-            sum -= 9.95
+            sum -= 150
             document.getElementById('sum').innerHTML = sum.toFixed(2)
 
         } else {

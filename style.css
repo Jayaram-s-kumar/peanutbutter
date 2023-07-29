@@ -566,7 +566,9 @@ input::placeholder{
     justify-content: space-around;
     box-sizing: border-box;
     margin-top: 100px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #41ffe9;
 
 
 }
@@ -586,6 +588,12 @@ input::placeholder{
 }
 
 .contact P:nth-child(2){
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.contact P:nth-child(3){
     font-size: 12px;
     color: gray;
 }
@@ -685,4 +693,67 @@ input::placeholder{
         font-size: 13px;
         padding-left: 5%;
     }
+}
+
+
+.love {
+    width: 100%;
+    background-color:#e9f3f4;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgba(0, 0, 0, 0.267);
+    padding-top: 20px;
+    background-color: #41ffe9;
+
+}
+@media (max-width: 884px) {
+    .love {
+        flex-direction: column;
+        row-gap: 20px;
+   }
+}
+.love .logodiv p {
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.love a {
+    color: red;
+    text-decoration: none;
+}
+.love p {
+    text-align: center;
+    padding: 0px 12px;
+    color: gray;
+
+}
+@media (max-width: 600px) {
+    .love p {
+        font-size: 13px !important;
+   }
+}
+.love .socialicons {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 10px;
+}
+.love .socialicons img {
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 600px) {
+    .love .socialicons img {
+        width: 17px;
+        height: 17px;
+   }
+}
+.love .socialicons a {
+    margin-top: 10px;
 }
